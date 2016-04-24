@@ -1,1 +1,6 @@
-index.html.erb
+<h1> all patients </h1>
+<% @patients.each do |patient| %>
+	<h2><%= patient.first_name %> <%= patient.last_name %></h2>
+	<p><%= patient.address %></p>
+	<a href="/patients/<%= patient.id %>">More info</a>
+<% end %>
