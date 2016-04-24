@@ -1,4 +1,9 @@
 <h1>Patient info</h1>
 <h2><%= @patient.first_name %> <%= @patient.last_name %></h2>
 <p><%= @patient.address %></p>
-<a href="/patients">Back to all patients</a>
+<div>
+	<a href="/patients/<%= @patient.id %>/edit">Edit info</a>
+</div>
+<div>
+	<a href="/patients">Back to all patients</a>
+</div>

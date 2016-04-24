@@ -1,0 +1,39 @@
+<h1>Create a new user</h1>
+<%= form_tag "/patients", method: :post do %>
+	<div>
+		<%= label_tag :first_name %>
+		<%= text_field_tag :first_name %>
+	</div>
+	<div>
+		<%= label_tag :last_name %>
+		<%= text_field_tag :last_name %>
+	</div>
+	<div>
+		<%= label_tag :address %>
+		<%= text_field_tag :address %>
+	</div>
+	<div>
+		<%= submit_tag %>
+	</div>
+<% end %>
+
+
+<!-- 
+<form action="/patients">
+	<div>
+		<label>First name:</label>
+		<input name="first_name">
+	</div>
+	<div>
+		<label>Last name:</label>
+		<input name="last_name">
+	</div>
+	<div>
+		<label>Address:</label>
+		<input name="address">
+	</div>
+	<div>
+		<input type="submit">
+	</div>
+</form> 
+-->

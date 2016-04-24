@@ -1,0 +1,42 @@
+<h1>Edit a User</h1>
+<%= form_tag "/patients/#{@patient.id}", method: :patch do %>
+	<div>
+		<%= label_tag :first_name %>
+		<%= text_field_tag :first_name, @patient.first_name %>
+	</div>
+	<div>
+		<%= label_tag :last_name %>
+		<%= text_field_tag :last_name, @patient.last_name %>
+	</div>
+	<div>
+		<%= label_tag :address %>
+		<%= text_field_tag :address, @patient.address %>
+	</div>
+	<div>
+		<%= submit_tag %>
+	</div>
+	<div>
+		<a href="/patients/<%= @patient.id %>">Cancel</a>
+	</div>
+<% end %>
+
+
+<!-- 
+<form action="/patients">
+	<div>
+		<label>First name:</label>
+		<input name="first_name">
+	</div>
+	<div>
+		<label>Last name:</label>
+		<input name="last_name">
+	</div>
+	<div>
+		<label>Address:</label>
+		<input name="address">
+	</div>
+	<div>
+		<input type="submit">
+	</div>
+</form> 
+-->
