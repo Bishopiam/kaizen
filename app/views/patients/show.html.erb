@@ -2,8 +2,15 @@
 <h2><%= @patient.first_name %> <%= @patient.last_name %></h2>
 <p><%= @patient.address %></p>
 <div>
+	<a href="/patients/<%= @patient.id %>/rides">See all rides</a>
+</div>
+<div>
+	<a href="/patients/<%= @patient.id %>/rides/new">Schedule a ride</a>
+</div>
+<div>
 	<a href="/patients/<%= @patient.id %>/edit">Edit info</a>
 </div>
 <div>
 	<a href="/patients">Back to all patients</a>
 </div>
+

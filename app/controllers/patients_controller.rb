@@ -42,4 +42,11 @@ class PatientsController < ApplicationController
 		# redirect_to '/patients/' + @patient.id
 		redirect_to "/patients/#{@patient.id}"
 	end
+
+	def destroy
+		patient_id = params[:id]
+		@patient = Patient.find_by(id: patient_id)
+		@patient.destroy
+		redirect_to '/patients'
+	end
 end

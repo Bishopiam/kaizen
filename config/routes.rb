@@ -5,6 +5,11 @@ Rails.application.routes.draw do
   get '/patients/:id' => 'patients#show'
   get '/patients/:id/edit' => 'patients#edit'
   patch '/patients/:id' => 'patients#update'
+  delete '/patients/:id' => 'patients#destroy'
+
+  get '/patients/:patient_id/rides' => 'rides#index'
+  get '/patients/:patient_id/rides/new' => 'rides#new'
+  post '/patients/:patient_id/rides' => 'rides#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

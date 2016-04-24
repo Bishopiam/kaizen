@@ -1,0 +1,18 @@
+<h1>Schedule a ride</h1>
+<%= form_tag "/patients/#{@patient_id}/rides", method: :post do %>
+	<div>
+		<%= label_tag :hospital_section %>
+		<%= text_field_tag :hospital_section %>
+	</div>
+	<div>
+		<%= label_tag :pickup_time %>
+		<%= datetime_local_field_tag :pickup_time %>
+	</div>
+	<div>
+		<%= label_tag :arrival_time %>
+		<%= datetime_local_field_tag :arrival_time %>
+	</div>
+	<div>
+		<%= submit_tag %>
+	</div>
+<% end %>

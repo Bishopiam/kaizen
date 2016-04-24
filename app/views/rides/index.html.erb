@@ -1,0 +1,8 @@
+<h1>Rides for <%= @patient.first_name %></h1>
+<% @rides.each do |ride| %>
+	<h2>Hospital name: <%= ride.hospital.name %></h2>
+	<p>Hospital address: <%= ride.hospital.address %></p>
+	<p>Pickup time: <%= ride.pickup_time %></p>
+	<p>Arrival time: <%= ride.arrival_time %></p>
+<% end %>
+<a href="/patients/<%= @patient.id %>">Back to patient info</a>
