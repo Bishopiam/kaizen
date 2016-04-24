@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hospital_section: MyString
+  pickup_time: 2016-04-24 12:56:29
+  arrival_time: 2016-04-24 12:56:29
+  patient_id: 1
+  hospital_id: 1
+
+two:
+  hospital_section: MyString
+  pickup_time: 2016-04-24 12:56:29
+  arrival_time: 2016-04-24 12:56:29
+  patient_id: 1
+  hospital_id: 1
