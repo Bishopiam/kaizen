@@ -7,6 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<!-- <a href="/users/sign_up">Sign up</a> -->
+<!-- <a href="/users/sign_in">Log in</a> -->
+<!-- <a href="/users/sign_out">Sign out</a> -->
+<nav>
+	<% if current_user %>
+		<%= link_to "Log out", "/users/sign_out", method: :delete %>
+	<% else %>
+		<%= link_to "Sign up", "/users/sign_up" %>
+		<%= link_to "Log in", "/users/sign_in" %>
+	<% end %>
+</nav>
 
 <%= yield %>
 

@@ -16,7 +16,7 @@ Hospital.create(
 )
 
 Patient.create(
-	first_name: "Michael",
+	first_name: "Kevin",
 	last_name: "Jones",
 	address: "1647 S. Blue Island Avenue, Chicago, Il 60608",
 	hospital_id: 1
@@ -37,9 +37,17 @@ Ride.create(
 )
 Ride.create( 
 	hospital_section: "A10", 
-	pickup_time: DateTime.new(2016, 4, 21, 12), 
-	arrival_time: DateTime.new(2016, 4, 23, 1), 
+	pickup_time: DateTime.new(2016, 4, 21, 7), 
+	arrival_time: DateTime.new(2016, 4, 23, 8), 
 	patient_id: 2, 
+	hospital_id: 1
+)
+
+Ride.create( 
+	hospital_section: "A10", 
+	pickup_time: DateTime.new(2016, 4, 30, 8), 
+	arrival_time: DateTime.new(2016, 4, 30, 9), 
+	patient_id: 1, 
 	hospital_id: 1
 )
 

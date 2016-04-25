@@ -1,6 +1,12 @@
 class PatientsController < ApplicationController
+	before_action :authenticate_user!
+
 	def index
-		@patients = Patient.all
+		hospital = Hospital.find_by(id: 1)
+		@patients = hospital.patients
+		if params[:search]
+			@patients = @patients.where("first_name LIKE ? OR last_name LIKE ?",  "%#{params[:search]}%", "%#{params[:search]}%") 
+		end
 		render 'index.html.erb'
 	end
 

@@ -1,5 +1,12 @@
 <a href="/patients/new">Create a new patient</a>
 <h1> all patients </h1>
+<%= form_tag "/patients", method: :get do %>
+	<div>
+		<%= label_tag :search, "Search For Patient:" %>
+		<%= text_field_tag :search %>
+		<%= submit_tag "Search" %> 
+	</div>
+<% end %>
 <% @patients.each do |patient| %>
 	<h2><%= patient.first_name %> <%= patient.last_name %></h2>
 	<p><%= patient.address %></p>

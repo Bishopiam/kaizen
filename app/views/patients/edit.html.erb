@@ -2,7 +2,7 @@
 <%= form_tag "/patients/#{@patient.id}", method: :patch do %>
 	<div>
 		<%= label_tag :first_name %>
-		<%= text_field_tag :first_name, @patient.first_name %>
+		<%= text_field_tag :first_name, @patient.first_name, class: 'form-control' %>
 	</div>
 	<div>
 		<%= label_tag :last_name %>

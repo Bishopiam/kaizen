@@ -1,4 +1,6 @@
 class RidesController < ApplicationController
+	before_action :authenticate_user!
+
 	def index
 		patient_id = params[:patient_id]
 		@patient = Patient.find_by(id: patient_id)
